@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5"
+         type="plugin"
+         group="system"
+         method="upgrade">
+	<name>System - Overrides</name>
+	<author>Don Gilbert</author>
+	<creationDate>Aug 2012</creationDate>
+	<copyright>(C) 2012 Don Gilbert. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>don@electriceasel.com</authorEmail>
+	<authorUrl>www.electriceasel.com</authorUrl>
+	<version>1.5.1</version>
+	<description>This plugin will override classes contained in the included config file.</description>
+
+	<files>
+		<filename plugin="overrides">overrides.php</filename>
+		<filename>config.php</filename>
+		<filename>index.html</filename>
+		<folder>overrides</folder>
+	</files>
+
+	<params addpath="/plugins/system/overrides/elements">
+		<param type="panel"
+		       title="Syndication Feeds"/>
+		<param name="authorName"
+		       type="text"
+		       default=""
+		       size="30"
+		       label="Author Name"
+		       description="The name to display, in place of the default author name, in all feeds (RSS and Atom)."/>
+		<param type="panels"/>
+	</params>
+
+</install>
